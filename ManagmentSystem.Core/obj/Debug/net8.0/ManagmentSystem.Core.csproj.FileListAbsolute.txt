@@ -1,0 +1,22 @@
+C:\Users\sever\Desktop\ManagmentSystem.Core\bin\Debug\net8.0\ManagmentSystem.Core.deps.json
+C:\Users\sever\Desktop\ManagmentSystem.Core\bin\Debug\net8.0\ManagmentSystem.Core.dll
+C:\Users\sever\Desktop\ManagmentSystem.Core\bin\Debug\net8.0\ManagmentSystem.Core.pdb
+C:\Users\sever\Desktop\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sever\Desktop\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.AssemblyInfoInputs.cache
+C:\Users\sever\Desktop\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.AssemblyInfo.cs
+C:\Users\sever\Desktop\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.csproj.CoreCompileInputs.cache
+C:\Users\sever\Desktop\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.dll
+C:\Users\sever\Desktop\ManagmentSystem.Core\obj\Debug\net8.0\refint\ManagmentSystem.Core.dll
+C:\Users\sever\Desktop\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.pdb
+C:\Users\sever\Desktop\ManagmentSystem.Core\obj\Debug\net8.0\ref\ManagmentSystem.Core.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\bin\Debug\net8.0\ManagmentSystem.Core.deps.json
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\bin\Debug\net8.0\ManagmentSystem.Core.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\bin\Debug\net8.0\ManagmentSystem.Core.pdb
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.AssemblyInfoInputs.cache
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.AssemblyInfo.cs
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.csproj.CoreCompileInputs.cache
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\refint\ManagmentSystem.Core.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.pdb
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ref\ManagmentSystem.Core.dll

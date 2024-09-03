@@ -1,0 +1,34 @@
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.csproj.AssemblyReference.cache
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.AssemblyInfoInputs.cache
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.AssemblyInfo.cs
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\bin\Debug\net8.0\ManagmentSystem.DataAccess.deps.json
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\bin\Debug\net8.0\ManagmentSystem.DataAccess.runtimeconfig.json
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\bin\Debug\net8.0\ManagmentSystem.DataAccess.dll
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\bin\Debug\net8.0\ManagmentSystem.DataAccess.pdb
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\bin\Debug\net8.0\ManagmentSystem.Core.dll
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\bin\Debug\net8.0\ManagmentSystem.Core.pdb
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\obj\Debug\net8.0\Managmen.CF46D58C.Up2Date
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.dll
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\obj\Debug\net8.0\refint\ManagmentSystem.DataAccess.dll
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.pdb
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.genruntimeconfig.cache
+C:\Users\sever\Desktop\ManagmentSystem.DataAccess\obj\Debug\net8.0\ref\ManagmentSystem.DataAccess.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\bin\Debug\net8.0\ManagmentSystem.DataAccess.deps.json
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\bin\Debug\net8.0\ManagmentSystem.DataAccess.runtimeconfig.json
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\bin\Debug\net8.0\ManagmentSystem.DataAccess.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\bin\Debug\net8.0\ManagmentSystem.DataAccess.pdb
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\bin\Debug\net8.0\ManagmentSystem.Core.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\bin\Debug\net8.0\ManagmentSystem.Core.pdb
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.csproj.AssemblyReference.cache
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.AssemblyInfoInputs.cache
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.AssemblyInfo.cs
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\Managmen.CF46D58C.Up2Date
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\refint\ManagmentSystem.DataAccess.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.pdb
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.genruntimeconfig.cache
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ref\ManagmentSystem.DataAccess.dll

@@ -1,0 +1,282 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|c:\\users\\sever\\desktop\\luna edge\\managementsystem\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\contracts\\usersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|solutionrelative:contracts\\usersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\contracts\\usersrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|solutionrelative:contracts\\usersrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sever\\Desktop\\ManagmentSystem.DataAccess\\Migrations\\20240903125650_Initialize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E3C252DA-9706-4BD6-B11E-8C0EFF722DD4}|ManagementSystem.csproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\sever\\desktop\\managmentsystem.dataaccess\\managmentsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\sever\\desktop\\managmentsystem.dataaccess\\repositories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\sever\\desktop\\managmentsystem.core\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\sever\\desktop\\managmentsystem.dataaccess\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\sever\\desktop\\managmentsystem.dataaccess\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\sever\\desktop\\managmentsystem.core\\abstractions\\iusersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\sever\\desktop\\managmentsystem.application\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\sever\\desktop\\managmentsystem.core\\abstractions\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ManagmentSystemDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\ManagmentSystem.DataAccess\\ManagmentSystemDbContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\ManagmentSystem.DataAccess\\ManagmentSystemDbContext.cs",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\ManagmentSystem.DataAccess\\ManagmentSystemDbContext.cs",
+              "RelativeToolTip": "..\\..\\ManagmentSystem.DataAccess\\ManagmentSystemDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T09:05:40.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-03T10:45:52.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UsersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\ManagmentSystem.DataAccess\\Repositories\\UsersRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\ManagmentSystem.DataAccess\\Repositories\\UsersRepository.cs",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\ManagmentSystem.DataAccess\\Repositories\\UsersRepository.cs",
+              "RelativeToolTip": "..\\..\\ManagmentSystem.DataAccess\\Repositories\\UsersRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T09:30:49.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T11:05:55.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsersResponse.cs",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\Contracts\\UsersResponse.cs",
+              "RelativeDocumentMoniker": "Contracts\\UsersResponse.cs",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\Contracts\\UsersResponse.cs",
+              "RelativeToolTip": "Contracts\\UsersResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T11:09:05.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\ManagmentSystem.Core\\Models\\User.cs",
+              "RelativeDocumentMoniker": "..\\..\\ManagmentSystem.Core\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\ManagmentSystem.Core\\Models\\User.cs",
+              "RelativeToolTip": "..\\..\\ManagmentSystem.Core\\Models\\User.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T19:05:30.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T19:00:20.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsersRequest.cs",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\Contracts\\UsersRequest.cs",
+              "RelativeDocumentMoniker": "Contracts\\UsersRequest.cs",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\Contracts\\UsersRequest.cs",
+              "RelativeToolTip": "Contracts\\UsersRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T13:10:02.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\ManagmentSystem.DataAccess\\Entities\\UserEntity.cs",
+              "RelativeDocumentMoniker": "..\\..\\ManagmentSystem.DataAccess\\Entities\\UserEntity.cs",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\ManagmentSystem.DataAccess\\Entities\\UserEntity.cs",
+              "RelativeToolTip": "..\\..\\ManagmentSystem.DataAccess\\Entities\\UserEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T09:09:42.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20240903125650_Initialize.cs",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\ManagmentSystem.DataAccess\\Migrations\\20240903125650_Initialize.cs",
+              "RelativeDocumentMoniker": "..\\..\\ManagmentSystem.DataAccess\\Migrations\\20240903125650_Initialize.cs",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\ManagmentSystem.DataAccess\\Migrations\\20240903125650_Initialize.cs",
+              "RelativeToolTip": "..\\..\\ManagmentSystem.DataAccess\\Migrations\\20240903125650_Initialize.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T12:56:50.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\ManagmentSystem.DataAccess\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\..\\ManagmentSystem.DataAccess\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\ManagmentSystem.DataAccess\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "..\\..\\ManagmentSystem.DataAccess\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T09:18:03.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-03T10:46:15.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IUsersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\ManagmentSystem.Core\\Abstractions\\IUsersRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\ManagmentSystem.Core\\Abstractions\\IUsersRepository.cs",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\ManagmentSystem.Core\\Abstractions\\IUsersRepository.cs",
+              "RelativeToolTip": "..\\..\\ManagmentSystem.Core\\Abstractions\\IUsersRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T10:30:05.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-09-03T10:48:50.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UsersService.cs",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\ManagmentSystem.Application\\Services\\UsersService.cs",
+              "RelativeDocumentMoniker": "..\\..\\ManagmentSystem.Application\\Services\\UsersService.cs",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\ManagmentSystem.Application\\Services\\UsersService.cs",
+              "RelativeToolTip": "..\\..\\ManagmentSystem.Application\\Services\\UsersService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T10:53:37.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IUsersService.cs",
+              "DocumentMoniker": "C:\\Users\\sever\\Desktop\\ManagmentSystem.Core\\Abstractions\\IUsersService.cs",
+              "RelativeDocumentMoniker": "..\\..\\ManagmentSystem.Core\\Abstractions\\IUsersService.cs",
+              "ToolTip": "C:\\Users\\sever\\Desktop\\ManagmentSystem.Core\\Abstractions\\IUsersService.cs",
+              "RelativeToolTip": "..\\..\\ManagmentSystem.Core\\Abstractions\\IUsersService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T11:01:13.606Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 456,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
