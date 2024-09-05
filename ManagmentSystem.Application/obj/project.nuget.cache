@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ROmF02T0ZIgrYXJbi0MJJY0KOTX3FlqhB6OWAjh8Q2casSGYd7KN0eeZ0zENTJKeESqu2LmAfu8my8MxMrqkAA==",
+  "dgSpecHash": "FITGjC8J0j5asE8AyJE+Fk6RCE6RCKaZ5BfhvuZc8/7Ppf1cj6tEJAAU1lftGnCTBn3rOs7LjzkXYujFYYA7aA==",
   "success": true,
   "projectFilePath": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagmentSystem.Application\\ManagmentSystem.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sever\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\sever\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\sever\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
+    "C:\\Users\\sever\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\sever\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\sever\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\sever\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",

@@ -1,24 +1,36 @@
-﻿using ManagementSystem.Contracts;
+﻿using ManagmentSystem.Application.Services;
+using ManagmentSystem.Application.Users.Commands.CreateUser;
 using ManagmentSystem.Core.Abstractions;
-using ManagmentSystem.Core.Models;
+using ManagmentSystem.Presentation.Contracts;
+using MediatR;
+using ManagmentSystem.Core.Shared;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
-namespace ManagementSystem.Controllers
+namespace ManagmentSystem.Presentation.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class UsersController : ControllerBase
     {
         private readonly IUsersService _usersService;
+        private readonly IMediator _mediator;
 
-        public UsersController(IUsersService usersService)
+        public UsersController(IMediator mediator, IUsersService usersService)
         {
             _usersService = usersService;
+            _mediator = mediator;
         }
 
         [HttpGet]
         public async Task<ActionResult<List<UsersResponse>>> GetUsers()
-        { 
+        {
             var users = await _usersService.GetUsers();
 
             var response = users.Select(u => new UsersResponse(u.Id, u.UserName, u.Email));
@@ -27,22 +39,18 @@ namespace ManagementSystem.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Guid>> CreateUser([FromBody] UsersRequest request)
+        public async Task<ActionResult<Guid>> CreateUser([FromBody] UsersRequest request, CancellationToken cancellationToken)
         {
-            var (user, error) = ManagmentSystem.Core.Models.User.Create(
-                Guid.NewGuid(),
-                request.userName,
-                request.email,
-                request.password);
+            var command = new CreateUserCommand(request.userName, request.email, request.password);
 
-            if (!string.IsNullOrEmpty(error))
-            { 
-                return BadRequest(error);
+            var result = await _mediator.Send(command, cancellationToken);
+
+            if (result.IsFailure)
+            {
+                return BadRequest(result.Error.Message);
             }
 
-            var userId = await _usersService.CreateUser(user);
-
-            return Ok(userId);
+            return Ok(result.Value);
         }
 
         [HttpPut("{id:guid}")]

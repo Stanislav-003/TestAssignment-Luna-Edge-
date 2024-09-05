@@ -284,3 +284,4 @@ C:\Users\sever\Desktop\Luna Edge\ManagementSystem\obj\Debug\net8.0\refint\Manage
 C:\Users\sever\Desktop\Luna Edge\ManagementSystem\obj\Debug\net8.0\ManagementSystem.pdb
 C:\Users\sever\Desktop\Luna Edge\ManagementSystem\obj\Debug\net8.0\ManagementSystem.genruntimeconfig.cache
 C:\Users\sever\Desktop\Luna Edge\ManagementSystem\obj\Debug\net8.0\ref\ManagementSystem.dll
+C:\Users\sever\Desktop\Luna Edge\ManagementSystem\obj\Debug\net8.0\ManagementSystem.sourcelink.json

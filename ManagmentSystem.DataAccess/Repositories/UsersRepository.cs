@@ -23,7 +23,7 @@ namespace ManagmentSystem.DataAccess.Repositories
             return users;
         }
 
-        public async Task<Guid> Create(User user)
+        public async Task<Guid> Create(User user, CancellationToken cancellationToken)
         {
             var userEntity = new UserEntity
             {

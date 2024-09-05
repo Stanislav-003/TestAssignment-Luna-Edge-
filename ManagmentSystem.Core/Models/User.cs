@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using ManagmentSystem.Core.Shared;
+using System.Text.RegularExpressions;
 
 namespace ManagmentSystem.Core.Models
 {
@@ -18,35 +19,33 @@ namespace ManagmentSystem.Core.Models
             PasswordHash = passwordHash;
         }
 
-        public Guid Id { get; } = Guid.NewGuid();
+        public Guid Id { get; } 
         public string UserName { get; } = string.Empty;
         public string Email { get; } = string.Empty;
         public string PasswordHash { get; } = string.Empty;
         public DateTime CreatedAt { get; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; private set; } = DateTime.UtcNow;
 
-        public static (User User, string Error) Create(Guid id, string userName, string email, string passwordHash)
+        public static (User? User, Error? Error) Create(Guid id, string userName, string email, string passwordHash)
         {
-            var error = string.Empty;
-
             if (string.IsNullOrEmpty(userName) || userName.Length > MAX_USERNAME_LENGTH)
             {
-                error = "UserName can not be empty or longer then 100 symbols";
+                return (null, new Error("InvalidUserName", "UserName can not be empty or longer than 100 symbols."));
             }
 
             if (string.IsNullOrEmpty(email) || email.Length > MAX_EMAIL_LENGTH || !IsValidEmail(email))
             {
-                error = "Email is invalid or longer than 255 characters.";
+                return (null, new Error("InvalidEmail", "Email is invalid or longer than 255 characters."));
             }
 
             if (string.IsNullOrEmpty(passwordHash) || passwordHash.Length < MIN_PASSWORD_LENGTH || passwordHash.Length > MAX_PASSWORD_LENGTH)
             {
-                error = "Password must be between 8 and 128 characters.";
+                return (null, new Error("InvalidPassword", "Password must be between 8 and 128 characters."));
             }
 
             var user = new User(id, userName, email, passwordHash);
 
-            return (user, error);
+            return (user, Error.None);
         }
 
         private static bool IsValidEmail(string email)

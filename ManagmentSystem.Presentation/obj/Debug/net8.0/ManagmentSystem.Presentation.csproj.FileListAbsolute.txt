@@ -1,0 +1,6 @@
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\ManagmentSystem.Presentation.csproj.AssemblyReference.cache
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\ManagmentSystem.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\ManagmentSystem.Presentation.AssemblyInfoInputs.cache
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\ManagmentSystem.Presentation.AssemblyInfo.cs
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\ManagmentSystem.Presentation.csproj.CoreCompileInputs.cache
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\ManagmentSystem.Presentation.sourcelink.json

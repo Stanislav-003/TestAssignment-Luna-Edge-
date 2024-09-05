@@ -32,3 +32,4 @@ C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ref
 C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.pdb
 C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.genruntimeconfig.cache
 C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ref\ManagmentSystem.DataAccess.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.DataAccess\obj\Debug\net8.0\ManagmentSystem.DataAccess.sourcelink.json

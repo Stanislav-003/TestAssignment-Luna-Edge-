@@ -4,7 +4,7 @@ namespace ManagmentSystem.Core.Abstractions
 {
     public interface IUsersRepository
     {
-        Task<Guid> Create(User user);
+        Task<Guid> Create(User user, CancellationToken cancellationToken = default);
         Task<Guid> Delete(Guid id);
         Task<List<User>> Get();
         Task<Guid> Update(Guid id, string userName, string email, string passwordHash);

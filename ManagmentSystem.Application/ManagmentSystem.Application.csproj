@@ -10,4 +10,15 @@
     <ProjectReference Include="..\ManagmentSystem.DataAccess\ManagmentSystem.DataAccess.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Users\Commands\DeleteUser\" />
+    <Folder Include="Users\Commands\UpdateUser\" />
+    <Folder Include="Users\Queries\GetUser\" />
+    <Folder Include="Users\Queries\GetUsers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.0" />
+  </ItemGroup>
+
 </Project>

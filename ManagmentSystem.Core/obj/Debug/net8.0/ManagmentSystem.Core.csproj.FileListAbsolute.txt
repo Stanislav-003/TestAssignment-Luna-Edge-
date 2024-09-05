@@ -20,3 +20,4 @@ C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\Managment
 C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\refint\ManagmentSystem.Core.dll
 C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.pdb
 C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ref\ManagmentSystem.Core.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.sourcelink.json
