@@ -285,3 +285,10 @@ C:\Users\sever\Desktop\Luna Edge\ManagementSystem\obj\Debug\net8.0\ManagementSys
 C:\Users\sever\Desktop\Luna Edge\ManagementSystem\obj\Debug\net8.0\ManagementSystem.genruntimeconfig.cache
 C:\Users\sever\Desktop\Luna Edge\ManagementSystem\obj\Debug\net8.0\ref\ManagementSystem.dll
 C:\Users\sever\Desktop\Luna Edge\ManagementSystem\obj\Debug\net8.0\ManagementSystem.sourcelink.json
+C:\Users\sever\Desktop\Luna Edge\ManagementSystem\bin\Debug\net8.0\MediatR.dll
+C:\Users\sever\Desktop\Luna Edge\ManagementSystem\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\sever\Desktop\Luna Edge\ManagementSystem\bin\Debug\net8.0\Scrutor.dll
+C:\Users\sever\Desktop\Luna Edge\ManagementSystem\bin\Debug\net8.0\ManagmentSystem.Presentation.dll
+C:\Users\sever\Desktop\Luna Edge\ManagementSystem\bin\Debug\net8.0\ManagmentSystem.Presentation.pdb
+C:\Users\sever\Desktop\Luna Edge\ManagementSystem\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\sever\Desktop\Luna Edge\ManagementSystem\bin\Debug\net8.0\BCrypt.Net-Next.dll

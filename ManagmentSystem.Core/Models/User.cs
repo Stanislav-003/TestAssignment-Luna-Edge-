@@ -11,22 +11,24 @@ namespace ManagmentSystem.Core.Models
         public const int MIN_PASSWORD_LENGTH = 8;
         public const int MAX_PASSWORD_LENGTH = 128;
 
-        private User(Guid id, string userName, string email, string passwordHash)
+        private User(Guid id, string userName, string email, string password, DateTime createdAt, DateTime updatedAt)
         {
             Id = id;
             UserName = userName;
             Email = email;
-            PasswordHash = passwordHash;
+            Password= password;
+            CreatedAt = createdAt;
+            UpdatedAt = updatedAt;
         }
 
-        public Guid Id { get; } 
+        public Guid Id { get; }
         public string UserName { get; } = string.Empty;
         public string Email { get; } = string.Empty;
-        public string PasswordHash { get; } = string.Empty;
+        public string Password { get; } = string.Empty;
         public DateTime CreatedAt { get; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; private set; } = DateTime.UtcNow;
 
-        public static (User? User, Error? Error) Create(Guid id, string userName, string email, string passwordHash)
+        public static (User? User, Error? Error) Create(Guid id, string userName, string email, string password)
         {
             if (string.IsNullOrEmpty(userName) || userName.Length > MAX_USERNAME_LENGTH)
             {
@@ -38,12 +40,12 @@ namespace ManagmentSystem.Core.Models
                 return (null, new Error("InvalidEmail", "Email is invalid or longer than 255 characters."));
             }
 
-            if (string.IsNullOrEmpty(passwordHash) || passwordHash.Length < MIN_PASSWORD_LENGTH || passwordHash.Length > MAX_PASSWORD_LENGTH)
+            if (string.IsNullOrEmpty(password) || password.Length < MIN_PASSWORD_LENGTH || password.Length > MAX_PASSWORD_LENGTH)
             {
                 return (null, new Error("InvalidPassword", "Password must be between 8 and 128 characters."));
             }
 
-            var user = new User(id, userName, email, passwordHash);
+            var user = new User(id, userName, email, password, DateTime.UtcNow, DateTime.UtcNow);
 
             return (user, Error.None);
         }

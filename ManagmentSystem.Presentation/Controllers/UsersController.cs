@@ -1,70 +1,166 @@
-﻿using ManagmentSystem.Application.Services;
-using ManagmentSystem.Application.Users.Commands.CreateUser;
-using ManagmentSystem.Core.Abstractions;
+﻿using ManagmentSystem.Application.Users.Commands.CreateUser;
 using ManagmentSystem.Presentation.Contracts;
 using MediatR;
 using ManagmentSystem.Core.Shared;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+using ManagmentSystem.Application.Users.Commands.DeleteUser;
+using ManagmentSystem.Application.Users.Login;
+using ManagmentSystem.Presentation.Abstractions;
+using Microsoft.AspNetCore.Authorization;
+using ManagmentSystem.Application.Users.Register;
+using Microsoft.AspNetCore.Http;
+using ManagmentSystem.Application.Tasks.Commands.CreateTask;
+using ManagmentSystem.Application.Tasks.Queries.GetTasks;
+using ManagmentSystem.Application.Tasks.Queries.GetTaskById;
 
 namespace ManagmentSystem.Presentation.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class UsersController : ControllerBase
+    public class UsersController : ApiController
     {
-        private readonly IUsersService _usersService;
         private readonly IMediator _mediator;
 
-        public UsersController(IMediator mediator, IUsersService usersService)
+        public UsersController(IMediator mediator) : base(mediator)
         {
-            _usersService = usersService;
             _mediator = mediator;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<List<UsersResponse>>> GetUsers()
+        [HttpPost("users/register")]
+        public async Task<IActionResult> RegisterUser([FromBody] RegisterRequest request, CancellationToken cancellationToken)
         {
-            var users = await _usersService.GetUsers();
-
-            var response = users.Select(u => new UsersResponse(u.Id, u.UserName, u.Email));
-
-            return Ok(response);
-        }
-
-        [HttpPost]
-        public async Task<ActionResult<Guid>> CreateUser([FromBody] UsersRequest request, CancellationToken cancellationToken)
-        {
-            var command = new CreateUserCommand(request.userName, request.email, request.password);
+            var command = new RegisterCommand(request.userName, request.email, request.password);
 
             var result = await _mediator.Send(command, cancellationToken);
 
             if (result.IsFailure)
             {
-                return BadRequest(result.Error.Message);
+                return HandleFailure(result);
+            }
+
+            return Ok(result);
+        }
+
+        [HttpPost("users/login")]
+        public async Task<IActionResult> LoginUser([FromBody] LoginRequest request, CancellationToken cancellationToken)
+        {
+            var command = new LoginCommand(request.Email, request.Password);
+
+            Result<string> tokenResult = await _mediator.Send(command, cancellationToken);
+
+            if (tokenResult.IsFailure)
+            { 
+                return HandleFailure(tokenResult);
+            }
+
+            HttpContext.Response.Cookies.Append("test-cookies", tokenResult.Value);
+
+            return Ok();
+        }
+
+        [Authorize]
+        [HttpPost("tasks")]
+        public async Task<IActionResult> CreateTask([FromBody] CreateTaskRequest request, CancellationToken cancellationToken)
+        {
+            var userIdClaim = HttpContext.User.FindFirst("userId");
+
+            if (userIdClaim == null || !Guid.TryParse(userIdClaim.Value, out var creatorId))
+            {
+                return Unauthorized("User ID is not available in the token.");
+            }
+
+            var command = new CreateTaskCommand(request.Title, request.Description, request.DueDate, request.Status, request.Priority, creatorId);
+
+            var result = await _mediator.Send(command, cancellationToken);
+
+            if (result.IsFailure)
+            {
+                return HandleFailure(result);
             }
 
             return Ok(result.Value);
         }
 
-        [HttpPut("{id:guid}")]
-        public async Task<ActionResult<Guid>> UpdateBook(Guid id, [FromBody] UsersRequest request)
+        [Authorize]
+        [HttpGet("tasks")]
+        public async Task<IActionResult> GetTasks(CancellationToken cancellationToken)
         {
-            var userId = await _usersService.UpdateUser(id, request.userName, request.email, request.password);
+            var userIdClaim = HttpContext.User.FindFirst("userId");
 
-            return Ok(userId);
+            if (userIdClaim == null || !Guid.TryParse(userIdClaim.Value, out var creatorId))
+            {
+                return Unauthorized("User ID is not available in the token.");
+            }
+
+            var query = new GetTasksQuery(creatorId);
+
+            Result<TasksResponse> response = await _mediator.Send(query, cancellationToken);
+
+            return response.IsSuccess
+                ? Ok(response.Value)
+                : NotFound(response.Error);
         }
 
-        [HttpDelete("{id:guid}")]
-        public async Task<ActionResult<Guid>> DeleteUser(Guid id)
+        [Authorize]
+        [HttpGet("task/id")]
+        public async Task<IActionResult> GetTaskById([FromQuery]Guid taskId, CancellationToken cancellationToken)
         {
-            return Ok(await _usersService.DeleteUser(id));
+            if (taskId == Guid.Empty)
+            {
+                return BadRequest("Task ID is required.");
+            }
+
+            var userIdClaim = HttpContext.User.FindFirst("userId");
+
+            if (userIdClaim == null || !Guid.TryParse(userIdClaim.Value, out var creatorId))
+            {
+                return Unauthorized("User ID is not available in the token.");
+            }
+
+            var query = new GetTaskByIdQuery(creatorId, taskId);
+
+            Result<TaskByIdResponse> response = await _mediator.Send(query, cancellationToken);
+
+            return response.IsSuccess
+                ? Ok(response.Value)
+                : NotFound(response.Error);
         }
+
+
+
+        //[Authorize]
+        //[HttpPost]
+        //public async Task<ActionResult<Guid>> CreateUser([FromBody] UsersRequest request, CancellationToken cancellationToken)
+        //{
+        //    var command = new CreateUserCommand(request.userName, request.email, request.password);
+
+        //    var result = await _mediator.Send(command, cancellationToken);
+
+        //    if (result.IsFailure)
+        //    {
+        //        return BadRequest(result.Error.Message);
+        //    }
+
+        //    return Ok(result.Value);
+        //}
+
+        //[Authorize]
+        //[HttpDelete("{id:guid}")]
+        //public async Task<ActionResult<Guid>> DeleteUser(Guid id, CancellationToken cancellationToken)
+        //{
+        //    var command = new DeleteUserCommand(id);
+
+        //    var result = await _mediator.Send(command, cancellationToken);
+
+        //    if (result.IsFailure)
+        //    {
+        //        if (result.Error == Error.NullValue)
+        //        {
+        //            return NotFound($"User with ID {id} not found.");
+        //        }
+
+        //        return BadRequest(result.Error.Message);
+        //    }
+
+        //    return Ok(result.Value);
+        //}
     }
 }

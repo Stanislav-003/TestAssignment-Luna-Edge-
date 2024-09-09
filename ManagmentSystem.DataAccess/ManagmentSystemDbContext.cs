@@ -12,10 +12,12 @@ namespace ManagmentSystem.DataAccess
         }
 
         public DbSet<UserEntity> Users { get; set; }
+        public DbSet<TaskEntity> Tasks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new TaskConfiguration());
         }
     }
 }

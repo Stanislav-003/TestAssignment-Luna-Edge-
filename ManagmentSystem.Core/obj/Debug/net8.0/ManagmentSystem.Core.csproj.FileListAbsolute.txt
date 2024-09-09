@@ -21,3 +21,5 @@ C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\refint\Ma
 C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.pdb
 C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ref\ManagmentSystem.Core.dll
 C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.sourcelink.json
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\bin\Debug\net8.0\ManagmentSystem.Core.runtimeconfig.json
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Core\obj\Debug\net8.0\ManagmentSystem.Core.genruntimeconfig.cache

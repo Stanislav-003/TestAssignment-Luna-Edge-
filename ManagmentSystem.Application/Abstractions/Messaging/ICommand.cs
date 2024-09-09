@@ -1,14 +1,13 @@
-﻿namespace ManagmentSystem.Application.Abstractions.Messaging
+﻿using ManagmentSystem.Core.Shared;
+using MediatR;
+
+namespace ManagmentSystem.Application.Abstractions.Messaging
 {
-    public interface ICommand : IBaseCommand
+    public interface ICommand : IRequest<Result>
     {
     }
 
-    public interface ICommand<TResponse> : IBaseCommand
-    { 
-    }
-
-    public interface IBaseCommand
-    {    
+    public interface ICommand<TResponse> : IRequest<Result<TResponse>>
+    {
     }
 }

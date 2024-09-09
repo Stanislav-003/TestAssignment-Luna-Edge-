@@ -1,9 +1,11 @@
 ﻿using ManagmentSystem.Core.Shared;
+using MediatR;
 
 namespace ManagmentSystem.Application.Abstractions.Messaging
 {
-    public interface IQueryHandler<in TQuery, TResponse> where TQuery : IQuery<TResponse>
+    public interface IQueryHandler<TQuery, TResponse>
+    : IRequestHandler<TQuery, Result<TResponse>>
+    where TQuery : IQuery<TResponse>
     {
-        Task<Result<TResponse>> Handle(TQuery query, CancellationToken cancellationToken);
     }
 }

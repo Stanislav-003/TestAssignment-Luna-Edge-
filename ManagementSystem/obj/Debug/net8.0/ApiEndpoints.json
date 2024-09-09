@@ -1,105 +1,76 @@
 [
   {
-    "ContainingType": "ManagementSystem.Controllers.UsersController",
-    "Method": "GetUsers",
-    "RelativePath": "Users",
+    "ContainingType": "ManagmentSystem.Presentation.Controllers.UsersController",
+    "Method": "GetTaskById",
+    "RelativePath": "task/id",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[ManagementSystem.Contracts.UsersResponse, ManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "taskId",
+        "Type": "System.Guid",
+        "IsRequired": false
       }
-    ]
+    ],
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "ManagementSystem.Controllers.UsersController",
-    "Method": "CreateUser",
-    "RelativePath": "Users",
+    "ContainingType": "ManagmentSystem.Presentation.Controllers.UsersController",
+    "Method": "CreateTask",
+    "RelativePath": "tasks",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "ManagementSystem.Contracts.UsersRequest",
+        "Type": "ManagmentSystem.Application.Tasks.Commands.CreateTask.CreateTaskRequest",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Guid",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "ManagementSystem.Controllers.UsersController",
-    "Method": "UpdateBook",
-    "RelativePath": "Users/{id}",
-    "HttpMethod": "PUT",
+    "ContainingType": "ManagmentSystem.Presentation.Controllers.UsersController",
+    "Method": "GetTasks",
+    "RelativePath": "tasks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ManagmentSystem.Presentation.Controllers.UsersController",
+    "Method": "LoginUser",
+    "RelativePath": "users/login",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
       {
         "Name": "request",
-        "Type": "ManagementSystem.Contracts.UsersRequest",
+        "Type": "ManagmentSystem.Application.Users.Login.LoginRequest",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Guid",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "ManagementSystem.Controllers.UsersController",
-    "Method": "DeleteUser",
-    "RelativePath": "Users/{id}",
-    "HttpMethod": "DELETE",
+    "ContainingType": "ManagmentSystem.Presentation.Controllers.UsersController",
+    "Method": "RegisterUser",
+    "RelativePath": "users/register",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Guid",
+        "Name": "request",
+        "Type": "ManagmentSystem.Application.Users.Register.RegisterRequest",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Guid",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   }
 ]

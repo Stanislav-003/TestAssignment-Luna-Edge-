@@ -4,3 +4,17 @@ C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\M
 C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\ManagmentSystem.Presentation.AssemblyInfo.cs
 C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\ManagmentSystem.Presentation.csproj.CoreCompileInputs.cache
 C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\ManagmentSystem.Presentation.sourcelink.json
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\bin\Debug\net8.0\ManagmentSystem.Presentation.deps.json
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\bin\Debug\net8.0\ManagmentSystem.Presentation.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\bin\Debug\net8.0\ManagmentSystem.Presentation.pdb
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\bin\Debug\net8.0\ManagmentSystem.Application.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\bin\Debug\net8.0\ManagmentSystem.Core.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\bin\Debug\net8.0\ManagmentSystem.DataAccess.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\bin\Debug\net8.0\ManagmentSystem.Application.pdb
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\bin\Debug\net8.0\ManagmentSystem.Core.pdb
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\bin\Debug\net8.0\ManagmentSystem.DataAccess.pdb
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\Managmen.A8C22737.Up2Date
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\ManagmentSystem.Presentation.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\refint\ManagmentSystem.Presentation.dll
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\ManagmentSystem.Presentation.pdb
+C:\Users\sever\Desktop\Luna Edge\ManagmentSystem.Presentation\obj\Debug\net8.0\ref\ManagmentSystem.Presentation.dll
