@@ -1,9 +1,6 @@
-﻿using ManagmentSystem.Application.Users.Commands.CreateUser;
-using ManagmentSystem.Presentation.Contracts;
-using MediatR;
+﻿using MediatR;
 using ManagmentSystem.Core.Shared;
 using Microsoft.AspNetCore.Mvc;
-using ManagmentSystem.Application.Users.Commands.DeleteUser;
 using ManagmentSystem.Application.Users.Login;
 using ManagmentSystem.Presentation.Abstractions;
 using Microsoft.AspNetCore.Authorization;
@@ -12,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using ManagmentSystem.Application.Tasks.Commands.CreateTask;
 using ManagmentSystem.Application.Tasks.Queries.GetTasks;
 using ManagmentSystem.Application.Tasks.Queries.GetTaskById;
+using ManagmentSystem.Application.Tasks.Commands.UpdateTask;
 
 namespace ManagmentSystem.Presentation.Controllers
 {
@@ -100,10 +98,10 @@ namespace ManagmentSystem.Presentation.Controllers
         }
 
         [Authorize]
-        [HttpGet("task/id")]
-        public async Task<IActionResult> GetTaskById([FromQuery]Guid taskId, CancellationToken cancellationToken)
+        [HttpGet("task/{id}")]
+        public async Task<IActionResult> GetTaskById([FromRoute]Guid id, CancellationToken cancellationToken)
         {
-            if (taskId == Guid.Empty)
+            if (id == Guid.Empty)
             {
                 return BadRequest("Task ID is required.");
             }
@@ -115,7 +113,7 @@ namespace ManagmentSystem.Presentation.Controllers
                 return Unauthorized("User ID is not available in the token.");
             }
 
-            var query = new GetTaskByIdQuery(creatorId, taskId);
+            var query = new GetTaskByIdQuery(creatorId, id);
 
             Result<TaskByIdResponse> response = await _mediator.Send(query, cancellationToken);
 
@@ -124,6 +122,33 @@ namespace ManagmentSystem.Presentation.Controllers
                 : NotFound(response.Error);
         }
 
+        [Authorize]
+        [HttpPut("task/id")]
+        public async Task<IActionResult> UpdateTaskById([FromRoute] Guid id, [FromBody] UpdateTaskRequest request, CancellationToken cancellationToken)
+        {
+            if (id == Guid.Empty)
+            {
+                return BadRequest("Task ID is required.");
+            }
+
+            var userIdClaim = HttpContext.User.FindFirst("userId");
+
+            if (userIdClaim == null || !Guid.TryParse(userIdClaim.Value, out var creatorId))
+            {
+                return Unauthorized("User ID is not available in the token.");
+            }
+
+            var command = new UpdateTaskCommand(id, request.Title, request.Description, request.DueDate, request.Status, request.Priority, creatorId);
+
+            var result = await _mediator.Send(command, cancellationToken);
+
+            if (result.IsFailure)
+            {
+                return HandleFailure(result);
+            }
+
+            return Ok(result.Value);
+        }
 
 
         //[Authorize]

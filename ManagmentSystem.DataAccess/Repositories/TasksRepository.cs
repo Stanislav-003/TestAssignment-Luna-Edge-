@@ -1,6 +1,10 @@
-﻿using ManagmentSystem.DataAccess.Abstractions;
+﻿using ManagmentSystem.Core.Enums;
+using ManagmentSystem.Core.Models;
+using ManagmentSystem.Core.Shared;
+using ManagmentSystem.DataAccess.Abstractions;
 using ManagmentSystem.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 
 namespace ManagmentSystem.DataAccess.Repositories;
 
@@ -45,5 +49,28 @@ public class TasksRepository : ITasksRepository
         return await _context.Tasks
             .AsNoTracking()
             .FirstOrDefaultAsync(t => t.UserId == OwnerId && t.Id == TaskId, cancellationToken);
+    }
+
+    public async Task<Result<Guid>> UpdateById(Guid TaskId, string Title, string Description, DateTime DueDate, Core.Enums.TaskStatus Status, TaskPriority Priority, Guid UserId, CancellationToken cancellationToken = default)
+    {
+        var task = await _context.Tasks.FirstOrDefaultAsync(t => t.Id == TaskId && t.UserId == UserId, cancellationToken);
+
+        if (task == null)
+        {
+            var error = new Error("TaskNotFound", "Task not found or user is not authorized to update this task.");
+            return Result.Failure<Guid>(error);
+        }
+
+        task.Title = Title;
+        task.Description = Description;
+        task.DueDate = DueDate;
+        task.Status = Status;
+        task.Priority = Priority;
+        task.UpdatedAt = DateTime.UtcNow; // Update DateTime
+
+        _context.Tasks.Update(task);
+        await _context.SaveChangesAsync(cancellationToken);
+
+        return Result.Success(task.Id);
     }
 }

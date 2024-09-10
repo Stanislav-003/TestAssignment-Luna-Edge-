@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ManagmentSystem.Application.Tasks.Commands.CreateTask;
 
-public record CreateTaskRequest(
+public sealed record CreateTaskRequest(
     string Title,
     string Description,
     DateTime DueDate,

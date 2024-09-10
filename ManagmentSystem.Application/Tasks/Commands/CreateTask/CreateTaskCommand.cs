@@ -4,7 +4,7 @@ using MediatR;
 
 namespace ManagmentSystem.Application.Tasks.Commands.CreateTask;
 
-public record CreateTaskCommand(
+public sealed record CreateTaskCommand(
     string Title, 
     string Description, 
     DateTime DueDate, 
