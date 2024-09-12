@@ -47,7 +47,7 @@ builder.Services.AddScoped<IUserContextService, UserContextService>();
 
 builder.Services.AddApiAuthentication(configuration.GetSection(nameof(JwtOptions)));
 
-builder.Services.AddScoped<EnsureUserIdClaimFilter>();
+builder.Services.AddScoped<EnsureUserIdClaimFilterAttribute>();
 
 builder.Services.AddControllers(config =>
 {

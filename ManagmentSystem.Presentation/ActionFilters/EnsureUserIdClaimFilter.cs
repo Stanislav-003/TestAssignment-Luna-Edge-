@@ -5,11 +5,11 @@ using ManagmentSystem.Application.Auth;
 
 namespace ManagmentSystem.Presentation.ActionFilters;
 
-public class EnsureUserIdClaimFilter : IAsyncActionFilter
+public class EnsureUserIdClaimFilterAttribute : Attribute, IAsyncActionFilter
 {
     private readonly IUserContextService _userContextService;
 
-    public EnsureUserIdClaimFilter(IUserContextService userContextService)
+    public EnsureUserIdClaimFilterAttribute(IUserContextService userContextService)
     {
         _userContextService = userContextService;
     }

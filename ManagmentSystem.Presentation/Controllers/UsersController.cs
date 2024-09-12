@@ -10,7 +10,6 @@ using ManagmentSystem.Application.Tasks.Commands.CreateTask;
 using ManagmentSystem.Application.Tasks.Queries.GetTasks;
 using ManagmentSystem.Application.Tasks.Queries.GetTaskById;
 using ManagmentSystem.Application.Tasks.Commands.UpdateTask;
-using ManagmentSystem.Core.Enums;
 using ManagmentSystem.Application.Abstractions.Auth;
 using ManagmentSystem.Application.Tasks.Commands.DeleteTask;
 using ManagmentSystem.Presentation.ActionFilters;
@@ -78,24 +77,17 @@ namespace ManagmentSystem.Presentation.Controllers
         }
 
         //[Authorize]
-        [ServiceFilter(typeof(EnsureUserIdClaimFilter))]
+        [ServiceFilter(typeof(EnsureUserIdClaimFilterAttribute))]
         [HttpPost("tasks")]
         public async Task<IActionResult> CreateTask([FromBody] CreateTaskRequest request, CancellationToken cancellationToken)
         {
-            var userIdClaim = _userContextService.GetUserId();
-
-            if (userIdClaim == null)
-            {
-                return Unauthorized("User ID is not available in the token.");
-            }
-
             var command = new CreateTaskCommand(
                 request.Title,
                 request.Description,
                 request.DueDate,
                 request.Status,
                 request.Priority,
-                userIdClaim.Value);
+                _userContextService.GetUserId()!.Value);
 
             var result = await _mediator.Send(command, cancellationToken);
 
@@ -108,18 +100,11 @@ namespace ManagmentSystem.Presentation.Controllers
         }
 
         //[Authorize]
-        [ServiceFilter(typeof(EnsureUserIdClaimFilter))]
+        [ServiceFilter(typeof(EnsureUserIdClaimFilterAttribute))]
         [HttpGet("tasks")]
         public async Task<IActionResult> GetTasks(CancellationToken cancellationToken)
         {
-            var userIdClaim = _userContextService.GetUserId();
-
-            if (userIdClaim == null)
-            {
-                return Unauthorized("User ID is not available in the token.");
-            }
-
-            var query = new GetTasksQuery(userIdClaim.Value);
+            var query = new GetTasksQuery(_userContextService.GetUserId()!.Value);
 
             Result<TasksResponse> response = await _mediator.Send(query, cancellationToken);
 
@@ -129,7 +114,7 @@ namespace ManagmentSystem.Presentation.Controllers
         }
 
         //[Authorize]
-        [ServiceFilter(typeof(EnsureUserIdClaimFilter))]
+        [ServiceFilter(typeof(EnsureUserIdClaimFilterAttribute))]
         [HttpGet("task/{id}")]
         public async Task<IActionResult> GetTaskById([FromRoute] Guid id, CancellationToken cancellationToken)
         {
@@ -138,14 +123,7 @@ namespace ManagmentSystem.Presentation.Controllers
                 return BadRequest("Task ID is required.");
             }
 
-            var userIdClaim = _userContextService.GetUserId();
-
-            if (userIdClaim == null)
-            {
-                return Unauthorized("User ID is not available in the token.");
-            }
-
-            var query = new GetTaskByIdQuery(userIdClaim.Value, id);
+            var query = new GetTaskByIdQuery(_userContextService.GetUserId()!.Value, id);
 
             Result<TaskByIdResponse> response = await _mediator.Send(query, cancellationToken);
 
@@ -155,7 +133,7 @@ namespace ManagmentSystem.Presentation.Controllers
         }
 
         //[Authorize]
-        [ServiceFilter(typeof(EnsureUserIdClaimFilter))]
+        [ServiceFilter(typeof(EnsureUserIdClaimFilterAttribute))]
         [HttpPut("task/id")]
         public async Task<IActionResult> UpdateTaskById([FromRoute] Guid id, [FromBody] UpdateTaskRequest request, CancellationToken cancellationToken)
         {
@@ -164,20 +142,14 @@ namespace ManagmentSystem.Presentation.Controllers
                 return BadRequest("Task ID is required.");
             }
 
-            var userIdClaim = _userContextService.GetUserId();
-
-            if (userIdClaim == null)
-            {
-                return Unauthorized("User ID is not available in the token.");
-            }
-
             var command = new UpdateTaskCommand(
-                id, request.Title,
+                id, 
+                request.Title,
                 request.Description,
                 request.DueDate,
                 request.Status,
                 request.Priority,
-                userIdClaim.Value);
+                _userContextService.GetUserId()!.Value);
 
             var result = await _mediator.Send(command, cancellationToken);
 
@@ -190,7 +162,7 @@ namespace ManagmentSystem.Presentation.Controllers
         }
 
         [HttpDelete("task/delete")]
-        [ServiceFilter(typeof(EnsureUserIdClaimFilter))]
+        [ServiceFilter(typeof(EnsureUserIdClaimFilterAttribute))]
         public async Task<IActionResult> DeleteTaskByID([FromRoute] Guid id, CancellationToken cancellationToken)
         {
             if (id == Guid.Empty)
@@ -198,14 +170,7 @@ namespace ManagmentSystem.Presentation.Controllers
                 return BadRequest("Task ID is required.");
             }
 
-            var userIdClaim = _userContextService.GetUserId();
-
-            if (userIdClaim == null)
-            {
-                return Unauthorized("User ID is not available in the token.");
-            }
-
-            var command = new DeleteTaskCommand(id, userIdClaim.Value);
+            var command = new DeleteTaskCommand(id, _userContextService.GetUserId()!.Value);
 
             var result = await _mediator.Send(command, cancellationToken);
 
