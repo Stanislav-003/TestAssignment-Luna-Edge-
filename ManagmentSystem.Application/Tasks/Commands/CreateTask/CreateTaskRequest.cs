@@ -7,5 +7,5 @@ public sealed record CreateTaskRequest(
     string Title,
     string Description,
     DateTime DueDate,
-    Core.Enums.TaskStatus Status,
-    TaskPriority Priority);
+    string Status,
+    string Priority);

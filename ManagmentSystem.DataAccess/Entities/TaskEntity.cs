@@ -9,8 +9,8 @@ namespace ManagmentSystem.DataAccess.Entities
         public string Title { get; set; } = string.Empty;
         public string? Description { get; set; } = string.Empty;
         public DateTime? DueDate { get; set; } = DateTime.UtcNow;
-        public TaskStatus Status { get; set; } = TaskStatus.Pending;
-        public TaskPriority Priority { get; set; } = TaskPriority.Medium;
+        public TaskStatus Status { get; set; } 
+        public TaskPriority Priority { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
         public Guid UserId { get; set; }

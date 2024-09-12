@@ -8,6 +8,6 @@ public sealed record CreateTaskCommand(
     string Title, 
     string Description, 
     DateTime DueDate, 
-    Core.Enums.TaskStatus Status, 
-    TaskPriority Priority, 
+    string Status, 
+    string Priority, 
     Guid UserId) : IRequest<Result<Guid>>;

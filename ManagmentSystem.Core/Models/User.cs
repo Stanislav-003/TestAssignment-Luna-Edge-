@@ -54,10 +54,5 @@ namespace ManagmentSystem.Core.Models
         {
             return Regex.IsMatch(email, EMAIL_REGEX);
         }
-
-        public void Update()
-        {
-            UpdatedAt = DateTime.UtcNow;
-        }
     }
 }

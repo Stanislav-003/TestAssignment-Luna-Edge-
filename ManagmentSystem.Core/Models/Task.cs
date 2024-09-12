@@ -30,12 +30,12 @@ namespace ManagmentSystem.Core.Models
         public string Title { get; } = string.Empty;
         public string? Description { get; } = null;
         public DateTime? DueDate { get; }
-        public TaskStatus Status { get; private set; } = TaskStatus.Pending;
-        public TaskPriority Priority { get; private set; } = TaskPriority.Low;
+        public TaskStatus Status { get; private set; }
+        public TaskPriority Priority { get; private set; }
         public DateTime CreatedAt { get; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; private set; } = DateTime.UtcNow;
 
-        public static (Task? Task, Error? Error) Create(Guid id, string title, string? description, DateTime? dueDate, TaskStatus status, TaskPriority priority)
+        public static (Task? Task, Error? Error) Create(Guid id, string title, string? description, DateTime? dueDate, string statusString, string priorityString)
         {
             if (string.IsNullOrEmpty(title) || title.Length > MAX_TITLE_LENGTH)
             {
@@ -47,26 +47,19 @@ namespace ManagmentSystem.Core.Models
                 return (null, new Error("InvalidDescription", $"Description cannot be longer than {MAX_DESCRIPTION_LENGTH} characters."));
             }
 
+            if (!Enum.TryParse<TaskStatus>(statusString, true, out var status) || !Enum.IsDefined(typeof(TaskStatus), status))
+            {
+                return (null, new Error("InvalidStatus", $"Status '{statusString}' is not a valid TaskStatus."));
+            }
+
+            if (!Enum.TryParse<TaskPriority>(priorityString, true, out var priority) || !Enum.IsDefined(typeof(TaskPriority), priority))
+            {
+                return (null, new Error("InvalidPriority", $"Priority '{priorityString}' is not a valid TaskPriority."));
+            }
+
             var task = new Task(id, title, description, dueDate, status, priority);
 
             return (task, Error.None);
-        }
-
-        public void UpdateStatus(TaskStatus newStatus)
-        {
-            Status = newStatus;
-            Update();
-        }
-
-        public void UpdatePriority(TaskPriority newPriority)
-        {
-            Priority = newPriority;
-            Update();
-        }
-
-        private void Update()
-        {
-            UpdatedAt = DateTime.UtcNow;
         }
     }
 }

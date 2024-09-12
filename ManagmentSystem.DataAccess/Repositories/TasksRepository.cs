@@ -73,4 +73,20 @@ public class TasksRepository : ITasksRepository
 
         return Result.Success(task.Id);
     }
+
+    public async Task<Result<Guid>> DeleteById(Guid TaskId, Guid UserId, CancellationToken cancellationToken = default)
+    {
+        var task = await _context.Tasks.FirstOrDefaultAsync(t => t.Id == TaskId && t.UserId == UserId, cancellationToken);
+
+        if (task == null)
+        {
+            var error = new Error("TaskNotFound", "Task not found or user is not authorized to update this task.");
+            return Result.Failure<Guid>(error);
+        }
+
+        _context.Tasks.Remove(task);
+        await _context.SaveChangesAsync(cancellationToken);
+        
+        return Result.Success(task.Id);
+    }
 }

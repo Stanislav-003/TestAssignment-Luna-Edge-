@@ -23,6 +23,11 @@ public sealed class GetTaskByIdQueryHandler : IQueryHandler<GetTaskByIdQuery, Ta
     {
         var userTask = await _tasksRepository.GetById(request.userId, request.taskId);
 
+        if (userTask == null)
+        {
+            return Result.Failure<TaskByIdResponse>(new Error("TaskNotFound", "Task not found or user is not authorized to view this task."));
+        }
+
         var response = new TaskByIdResponse(
             userTask!.Id,
             userTask.Title,

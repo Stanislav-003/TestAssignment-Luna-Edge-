@@ -9,7 +9,11 @@ using ManagmentSystem.DataAccess.Abstractions;
 using ManagmentSystem.Application.Abstractions.Auth;
 using ManagmentSystem.Application.Auth;
 using Microsoft.AspNetCore.CookiePolicy;
-using ManagementSystem;
+using ManagementSystem.Filters;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using ManagmentSystem.Presentation.ActionFilters;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -17,7 +21,6 @@ var configuration = builder.Configuration;
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
-    c.SchemaFilter<EnumSchemeFilter>();
 });
 
 builder.Services.AddDbContext<ManagmentSystemDbContext>(options =>
@@ -39,7 +42,20 @@ builder.Services.AddScoped<ITasksRepository, TasksRepository>();
 builder.Services.AddScoped<IJwtProvider, JwtProvider>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 
+builder.Services.AddHttpContextAccessor(); 
+builder.Services.AddScoped<IUserContextService, UserContextService>();
+
 builder.Services.AddApiAuthentication(configuration.GetSection(nameof(JwtOptions)));
+
+builder.Services.AddScoped<EnsureUserIdClaimFilter>();
+
+builder.Services.AddControllers(config =>
+{
+    var policy = new AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser()
+                    .Build();
+    config.Filters.Add(new AuthorizeFilter(policy));
+});
 
 var app = builder.Build();
 

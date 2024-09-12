@@ -34,13 +34,10 @@ public sealed class UpdateTaskCommandHandler : IRequestHandler<UpdateTaskCommand
 
         if (updateResult.IsFailure)
         {
-            _logger.LogWarning("Failed to update task: {Error}", updateResult.Error);
             return Result.Failure<Guid>(updateResult.Error);
         }
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
-
-        _logger.LogInformation("Task with ID {TaskId} successfully updated", request.TaskId);
 
         return updateResult;
     }

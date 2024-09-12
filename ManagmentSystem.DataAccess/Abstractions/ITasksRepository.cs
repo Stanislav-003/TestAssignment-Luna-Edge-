@@ -10,4 +10,5 @@ public interface ITasksRepository
     Task<List<TaskEntity>> GetAll(Guid OwnerId, CancellationToken cancellationToken = default);
     Task<TaskEntity?> GetById(Guid OwnerId, Guid TaskId, CancellationToken cancellationToken = default);
     Task<Result<Guid>> UpdateById(Guid TaskId, string Title, string Description, DateTime DueDate, Core.Enums.TaskStatus Status, TaskPriority Priority, Guid UserId, CancellationToken cancellationToken = default);
+    Task<Result<Guid>> DeleteById(Guid TaskId, Guid UserId, CancellationToken cancellationToken = default);
 }
