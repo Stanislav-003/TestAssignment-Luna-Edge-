@@ -5,6 +5,9 @@ using ManagmentSystem.DataAccess.Abstractions;
 using ManagmentSystem.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
+using System.Linq;
+using System.Linq.Expressions;
+using TaskStatus = ManagmentSystem.Core.Enums.TaskStatus;
 
 namespace ManagmentSystem.DataAccess.Repositories;
 
@@ -36,12 +39,70 @@ public class TasksRepository : ITasksRepository
         return taskEntity.Id;
     }
 
-    public async Task<List<TaskEntity>> GetAll(Guid OwnerId, CancellationToken cancellationToken = default)
+    public async Task<PagedList<TaskEntity>> GetAll(
+        Guid OwnerId,
+        int page,
+        int pageSize,
+        string? searchTerm = null,
+        string? sortColumn = null,
+        string? sortOrder = null,
+        CancellationToken cancellationToken = default)
     {
-        return await _context.Tasks
-            .Where(t => t.UserId == OwnerId)
-            .AsNoTracking()
-            .ToListAsync(cancellationToken);
+        // перевірка та встановлення значень за замовчуванням для сторінки та розміру сторінки
+        if (page <= 0) page = 1;
+        if (pageSize <= 0) pageSize = 10;
+
+        // формування базового запиту: вибираємо задачі, що належать конкретному користувачеві
+        IQueryable<TaskEntity> tasksQuery = _context.Tasks.Where(t => t.UserId == OwnerId);
+
+        // застосування фільтрації за пошуковим запитом
+        tasksQuery = ApplySearch(tasksQuery, searchTerm);
+
+        // застосування сортування за вказаною колонкою та порядком
+        tasksQuery = ApplySorting(tasksQuery, sortColumn, sortOrder);
+
+        // вимикаємо відстеження змін для покращення продуктивності
+        var tasksResponesQuery = tasksQuery.AsNoTracking();
+
+        // створення об'єкту PagedList з отриманих даних
+        var tasks = await PagedList<TaskEntity>.CreateAsync(
+            tasksResponesQuery,
+            page,
+            pageSize);
+
+        return tasks;
+    }
+
+    // метод для застосування фільтрації за пошуковим запитом
+    private IQueryable<TaskEntity> ApplySearch(IQueryable<TaskEntity> query, string? searchTerm)
+    {
+        if (!string.IsNullOrWhiteSpace(searchTerm))
+        {
+            TaskStatus? status = Enum.TryParse(searchTerm, true, out TaskStatus parsedStatus) ? parsedStatus : (TaskStatus?)null;
+            TaskPriority? priority = Enum.TryParse(searchTerm, true, out TaskPriority parsedPriority) ? parsedPriority : (TaskPriority?)null;
+
+            query = query.Where(t =>
+                (status.HasValue && t.Status == status.Value) ||
+                (priority.HasValue && t.Priority == priority.Value)
+            );
+        }
+
+        return query;
+    }
+
+    // метод для застосування сортування за вказаною колонкою та порядком
+    private IQueryable<TaskEntity> ApplySorting(IQueryable<TaskEntity> query, string? sortColumn, string? sortOrder)
+    {
+        Expression<Func<TaskEntity, object>> keySelector = sortColumn?.ToLower() switch
+        {
+            "status" => task => task.Status,
+            "priority" => task => task.Priority,
+            _ => task => task.Id,
+        };
+
+        return sortOrder?.ToLower() == "desc"
+            ? query.OrderByDescending(keySelector)
+            : query.OrderBy(keySelector);
     }
 
     public async Task<TaskEntity?> GetById(Guid OwnerId, Guid TaskId, CancellationToken cancellationToken = default)

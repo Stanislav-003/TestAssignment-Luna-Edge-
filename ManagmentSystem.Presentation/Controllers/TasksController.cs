@@ -4,11 +4,13 @@ using ManagmentSystem.Application.Tasks.Commands.DeleteTask;
 using ManagmentSystem.Application.Tasks.Commands.UpdateTask;
 using ManagmentSystem.Application.Tasks.Queries.GetTaskById;
 using ManagmentSystem.Application.Tasks.Queries.GetTasks;
+using ManagmentSystem.Core.Enums;
 using ManagmentSystem.Core.Shared;
 using ManagmentSystem.Presentation.Abstractions;
 using ManagmentSystem.Presentation.ActionFilters;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using TaskStatus = ManagmentSystem.Core.Enums.TaskStatus;
 
 namespace ManagmentSystem.Presentation.Controllers;
 
@@ -49,9 +51,21 @@ public class TasksController : ApiController
     //[Authorize]
     [ServiceFilter(typeof(EnsureUserIdClaimFilterAttribute))]
     [HttpGet("tasks")]
-    public async Task<IActionResult> GetTasks(CancellationToken cancellationToken)
+    public async Task<IActionResult> GetTasks(
+        [FromQuery] int page,
+        [FromQuery] int pageSize,
+        [FromQuery] string? searchTerm = null,
+        [FromQuery] string? sortColumn = null,
+        [FromQuery] string? sortOrder = null,
+        CancellationToken cancellationToken = default)
     {
-        var query = new GetTasksQuery(_userContextService.GetUserId()!.Value);
+        var query = new GetTasksQuery(
+            _userContextService.GetUserId()!.Value,
+            page,
+            pageSize,
+            searchTerm,
+            sortColumn,
+            sortOrder);
 
         Result<TasksResponse> response = await _mediator.Send(query, cancellationToken);
 
