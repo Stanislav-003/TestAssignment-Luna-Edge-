@@ -18,6 +18,16 @@ public class DeleteTaskCommandHandler : IRequestHandler<DeleteTaskCommand, Resul
 
     public async Task<Result<Guid>> Handle(DeleteTaskCommand request, CancellationToken cancellationToken)
     {
+        if (request.TaskId == Guid.Empty)
+        {
+            return Result.Failure<Guid>(new Error("InvalidTaskId", "Task ID must be provided."));
+        }
+
+        if (request.OwnerId == Guid.Empty)
+        {
+            return Result.Failure<Guid>(new Error("InvalidOwnerId", "Owner ID must be provided."));
+        }
+
         var deleteResult = await _tasksRepository.DeleteById(request.TaskId, request.OwnerId);
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);

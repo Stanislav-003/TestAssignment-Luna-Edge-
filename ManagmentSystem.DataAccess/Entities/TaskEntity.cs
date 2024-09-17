@@ -1,19 +1,18 @@
 ﻿using ManagmentSystem.Core.Enums;
 using TaskStatus = ManagmentSystem.Core.Enums.TaskStatus;
 
-namespace ManagmentSystem.DataAccess.Entities
+namespace ManagmentSystem.DataAccess.Entities;
+
+public class TaskEntity
 {
-    public class TaskEntity
-    {
-        public Guid Id { get; set; } = Guid.NewGuid();
-        public string Title { get; set; } = string.Empty;
-        public string? Description { get; set; } = string.Empty;
-        public DateTime? DueDate { get; set; } = DateTime.UtcNow;
-        public TaskStatus Status { get; set; } 
-        public TaskPriority Priority { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
-        public Guid UserId { get; set; }
-        public UserEntity User { get; set; } = null!;
-    }
+    public Guid Id { get; set; } = Guid.NewGuid();
+    public string Title { get; set; } = string.Empty;
+    public string? Description { get; set; } = string.Empty;
+    public DateTime? DueDate { get; set; } = DateTime.UtcNow;
+    public TaskStatus Status { get; set; } 
+    public TaskPriority Priority { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+    public Guid UserId { get; set; }
+    public UserEntity User { get; set; } = null!;
 }

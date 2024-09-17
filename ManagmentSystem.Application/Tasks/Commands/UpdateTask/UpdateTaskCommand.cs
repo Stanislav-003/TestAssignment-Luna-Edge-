@@ -3,6 +3,7 @@ using ManagmentSystem.Core.Enums;
 using ManagmentSystem.Core.Shared;
 using ManagmentSystem.DataAccess.Entities;
 using MediatR;
+using TaskStatus = ManagmentSystem.Core.Enums.TaskStatus;
 
 namespace ManagmentSystem.Application.Tasks.Commands.UpdateTask;
 
@@ -11,6 +12,6 @@ public sealed record UpdateTaskCommand(
     string Title,
     string Description,
     DateTime DueDate,
-    Core.Enums.TaskStatus Status,
+    TaskStatus Status,
     TaskPriority Priority,
     Guid UserId) : IRequest<Result<Guid>>;

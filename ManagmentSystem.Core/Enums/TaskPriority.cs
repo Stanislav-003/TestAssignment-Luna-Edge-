@@ -1,9 +1,8 @@
-﻿namespace ManagmentSystem.Core.Enums
+﻿namespace ManagmentSystem.Core.Enums;
+
+public enum TaskPriority
 {
-    public enum TaskPriority
-    {
-        Low,
-        Medium,
-        High
-    }
+    Low,
+    Medium,
+    High
 }
