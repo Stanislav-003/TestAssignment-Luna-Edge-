@@ -3,21 +3,20 @@ using ManagmentSystem.DataAccess.Configurations;
 using ManagmentSystem.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace ManagmentSystem.DataAccess
+namespace ManagmentSystem.DataAccess;
+
+public class ManagmentSystemDbContext : DbContext
 {
-    public class ManagmentSystemDbContext : DbContext
+    public ManagmentSystemDbContext(DbContextOptions<ManagmentSystemDbContext> options) : base(options)
     {
-        public ManagmentSystemDbContext(DbContextOptions<ManagmentSystemDbContext> options) : base(options)
-        {
-        }
+    }
 
-        public DbSet<UserEntity> Users { get; set; }
-        public DbSet<TaskEntity> Tasks { get; set; }
+    public DbSet<UserEntity> Users { get; set; }
+    public DbSet<TaskEntity> Tasks { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.ApplyConfiguration(new UserConfiguration());
-            modelBuilder.ApplyConfiguration(new TaskConfiguration());
-        }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfiguration(new UserConfiguration());
+        modelBuilder.ApplyConfiguration(new TaskConfiguration());
     }
 }

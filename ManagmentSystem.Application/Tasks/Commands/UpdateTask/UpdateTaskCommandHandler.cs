@@ -11,17 +11,20 @@ public sealed class UpdateTaskCommandHandler : IRequestHandler<UpdateTaskCommand
 {
     private readonly ITasksRepository _tasksRepository;
     private readonly IUnitOfWork _unitOfWork;
-    private readonly ILogger<UpdateTaskCommandHandler> _logger;
 
-    public UpdateTaskCommandHandler(ITasksRepository tasksRepository, ILogger<UpdateTaskCommandHandler> logger, IUnitOfWork unitOfWork)
+    public UpdateTaskCommandHandler(ITasksRepository tasksRepository, IUnitOfWork unitOfWork)
     {
         _tasksRepository = tasksRepository;
         _unitOfWork = unitOfWork;
-        _logger = logger;
     }
 
     public async Task<Result<Guid>> Handle(UpdateTaskCommand request, CancellationToken cancellationToken)
     {
+        if (request.UserId == Guid.Empty)
+        {
+            return Result.Failure<Guid>(new Error("InvalidUserId", "User ID must be provided."));
+        }
+
         var updateResult = await _tasksRepository.UpdateById(
             request.TaskId,
             request.Title,

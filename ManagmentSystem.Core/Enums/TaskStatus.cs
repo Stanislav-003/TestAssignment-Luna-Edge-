@@ -1,9 +1,8 @@
-﻿namespace ManagmentSystem.Core.Enums
+﻿namespace ManagmentSystem.Core.Enums;
+
+public enum TaskStatus
 {
-    public enum TaskStatus
-    {
-        Pending,
-        InProgress,
-        Completed
-    }
+    Pending,
+    InProgress,
+    Completed
 }
