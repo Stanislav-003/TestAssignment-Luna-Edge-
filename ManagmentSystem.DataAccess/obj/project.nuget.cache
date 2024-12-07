@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a5yi2TnadaXOMfWqHhjZNRxIWiQ8QzC99yw6NIYovz1kHYE4Yvdoz3zYioKLu0r3B0LtHwQkDpWe0hh8cl8EhQ==",
+  "dgSpecHash": "0riqE8uPKt4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagmentSystem.DataAccess\\ManagmentSystem.DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\sever\\Desktop\\ITVDN HW\\Luna Edge\\ManagmentSystem.DataAccess\\ManagmentSystem.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sever\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\sever\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

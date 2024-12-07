@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JI/MW3LlhnWLx/XpA9D9jXTbd1gXZgxL8X4HyIJTHw+fAOCLiTt1xTzLgvkRcxm27tBCjavC4p8A35URdD82RA==",
+  "dgSpecHash": "NcnXpSNNbNo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagementSystem\\ManagementSystem.csproj",
+  "projectFilePath": "C:\\Users\\sever\\Desktop\\ITVDN HW\\Luna Edge\\ManagementSystem\\ManagementSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sever\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\sever\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

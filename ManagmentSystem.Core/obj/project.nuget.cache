@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZEj3k9m1P/Ea6WipbRswaajL2jUDH+LT0lSpRrjNMSmcyE0leFyVeQAf+8ULaoIUzzc17c2ZiVMw02DWgf6l8g==",
+  "dgSpecHash": "xgrl+UDoEGE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sever\\Desktop\\Luna Edge\\ManagmentSystem.Core\\ManagmentSystem.Core.csproj",
+  "projectFilePath": "C:\\Users\\sever\\Desktop\\ITVDN HW\\Luna Edge\\ManagmentSystem.Core\\ManagmentSystem.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sever\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\sever\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
