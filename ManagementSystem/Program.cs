@@ -57,6 +57,7 @@ builder.Services.AddControllers(config =>
     config.Filters.Add(new AuthorizeFilter(policy));
 });
 
+// Middlewares
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
